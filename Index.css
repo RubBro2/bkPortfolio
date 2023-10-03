@@ -1,12 +1,18 @@
 #heroLogo {
     opacity: 0.5;
-    height: 50%;
-    width: 50%;
+    width: 200px;
+    height: auto; 
 }
+
+#heroCont {
+    max-width: 50%;
+    max-height: 50%;
+}
+
 
 #heroTitle {
     font-family: "ethnocentric", sans-serif;
-    font-weight: 300;
+    font-weight: 00;
     font-size: 7vw;
 }
 
@@ -40,7 +46,7 @@
 }
 
 #costumMargin2 {
-    margin-top: 200px;
+    margin-top: 100px;
     font-family: "itc-avant-garde-gothic-pro", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -54,8 +60,8 @@
 }
 
 #instgramIcon {
-    width: 3%;
-    height: 3%;
+    width: 7%;
+    height: 7%;
 }
 
 #vue-icon {
@@ -79,57 +85,39 @@
 }
 
 .card {
-    width: 15vw;
-    height: 20vw;
-    background: rgb(255, 255, 255);
-    transition: all 0.4s;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 5px  rgba(129, 129, 129, 0.705);
-    font-size: 3vw;
-    font-weight: 900;
+    position: relative;
+    overflow: hidden;
+    width: 300px; 
+    height: 200px; 
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
   
   .card:hover {
-    border-radius: 15px;
-    cursor: pointer;
-    transform: scale(1.2);
-    box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
-    background: rgb(0, 0, 0);
+    transform: scale(1.1); /* Increase size on hover */
+    opacity: 1; /* Reduce opacity on hover */
   }
   
-  .first-content {
-    height: 100%;
+  .card-img {
+    object-fit: cover;
     width: 100%;
-    transition: all 0.4s ease-in-out;
+    height: 100%;
+  }
+  
+  .card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 1;
-    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    transition: opacity 0.3s ease;
   }
   
-  .card:hover .first-content {
-    height: 0px;
+  .card:hover .card-img-overlay {
     opacity: 0;
-  }
-  
-  .second-content {
-    height: 0%;
-    width: 100%;
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    transition: all 0.4s;
-    font-size: 0px;
-    transform: rotate(90deg) scale(-1);
-  }
-  
-  .card:hover .second-content {
-    opacity: 1;
-    height: 100%;
-    font-size: 3vw;
-    transform: rotate(0deg);
-  }
-  
+}  
